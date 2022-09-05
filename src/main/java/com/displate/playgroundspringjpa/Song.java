@@ -21,6 +21,6 @@ class Song {
 
     @ManyToOne
     @JoinColumn(name = "singer_id")
-    private SingerEntity singer;
+    private Singer singer;
 
 }

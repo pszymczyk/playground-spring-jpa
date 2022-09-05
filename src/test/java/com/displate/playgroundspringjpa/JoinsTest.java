@@ -26,7 +26,7 @@ class JoinsTest {
 
     @Test
     void shouldCreatePlaylist() {
-        SingerEntity singer = new SingerEntity();
+        Singer singer = new Singer();
         singer.setName("Katy Perry");
 //        singerRepository.save(singer);
 
@@ -45,7 +45,7 @@ class JoinsTest {
      */
     @Test
     void shouldThrowExceptionWhenSingerIsNotPersisted() {
-        SingerEntity singer = new SingerEntity();
+        Singer singer = new Singer();
         singer.setName("Miley Cyrus");
         Playlist playlist = new Playlist();
         playlist.setName("Best kids songs");
@@ -63,7 +63,7 @@ class JoinsTest {
         playlistRepository.save(p);
 
         for (int i = 0; i < 10; i++) {
-            SingerEntity s = new SingerEntity();
+            Singer s = new Singer();
             p.getSingers().add(s);
             s.setName("s" + i);
             for (int j = 0; j < 100; j++) {

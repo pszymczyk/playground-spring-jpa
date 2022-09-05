@@ -11,7 +11,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Entity
-@Setter(value = AccessLevel.PRIVATE)
+@Setter
 public class Playlist {
 
     @Id
@@ -26,5 +26,5 @@ public class Playlist {
             name = "playlist_singers",
             joinColumns = @JoinColumn(name = "playlist_id"),
             inverseJoinColumns = @JoinColumn(name = "singer_id"))
-    Set<SingerEntity> singers = new java.util.LinkedHashSet<>();
+    Set<Singer> singers = new java.util.LinkedHashSet<>();
 }
